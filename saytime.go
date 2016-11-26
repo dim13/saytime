@@ -61,3 +61,7 @@ func (n Time) tod() string {
 func (n Time) String() string {
 	return "The time is now, " + n.approx() + n.minute() + n.hour() + n.tod()
 }
+
+func New(t time.Time) Time {
+	return Time{t}
+}
