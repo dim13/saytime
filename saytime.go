@@ -35,20 +35,20 @@ var hours = []string{
 }
 
 func (n Time) hour() string {
-	h, m := n.Hour()%len(hours), n.Minute()
+	h, m := n.Hour(), n.Minute()
 	if m > 33 {
 		h++
+	}
+	if h == 24 {
+		return " midnight"
 	}
 	return hours[h%len(hours)]
 }
 func (n Time) tod() string {
 	h, m := n.Hour(), n.Minute()
-	if m > 58 {
-		h = (h + 1) % 24
-	}
 	switch {
-	case h == 0 && m < 33:
-		return ""
+	case h == 11 && m > 58, h == 23 && m > 33:
+		return "."
 	case h > 17:
 		return ", in the evening"
 	case h > 11:
