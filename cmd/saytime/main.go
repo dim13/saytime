@@ -8,6 +8,5 @@ import (
 )
 
 func main() {
-	now := time.Now()
-	fmt.Println(now.Format(time.Kitchen), saytime.New(now))
+	fmt.Println(saytime.New(time.Now()))
 }
