@@ -45,6 +45,7 @@ func (n Time) hour() string {
 	}
 	return hours[h%len(hours)]
 }
+
 func (n Time) tod() string {
 	h, m := n.Hour(), n.Minute()
 	switch {
