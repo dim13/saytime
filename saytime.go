@@ -50,7 +50,7 @@ func (n Time) tod() string {
 	h, m := n.Hour(), n.Minute()
 	switch {
 	case h == 11 && m >= 58, h == 23 && m >= 33:
-		return "."
+		return ""
 	case h > 17:
 		return ", in the evening"
 	case h > 11:
