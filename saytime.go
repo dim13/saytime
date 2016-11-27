@@ -24,7 +24,7 @@ var minutes = []string{
 
 func (n Time) minute() string {
 	m := n.Minute() / 5
-	if n.Minute()%5 > 2 {
+	if n.Minute()%5 >= 3 {
 		m++
 	}
 	return minutes[m%len(minutes)]
@@ -37,7 +37,7 @@ var hours = []string{
 
 func (n Time) hour() string {
 	h, m := n.Hour(), n.Minute()
-	if m > 33 {
+	if m >= 33 {
 		h++
 	}
 	if h == 24 {
@@ -49,7 +49,7 @@ func (n Time) hour() string {
 func (n Time) tod() string {
 	h, m := n.Hour(), n.Minute()
 	switch {
-	case h == 11 && m > 58, h == 23 && m > 33:
+	case h == 11 && m >= 58, h == 23 && m >= 33:
 		return "."
 	case h > 17:
 		return ", in the evening"
