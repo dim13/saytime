@@ -1,8 +1,9 @@
-// The time is now ...
+// Package saytime translates time into plain English
 package saytime
 
 import "time"
 
+// Time wraps time.Time
 type Time struct {
 	time.Time
 }
@@ -62,6 +63,7 @@ func (n Time) String() string {
 	return "The time is now, " + n.approx() + n.minute() + n.hour() + n.tod()
 }
 
+// Now represents time now
 func Now() Time {
 	return Time{time.Now()}
 }
