@@ -12,17 +12,17 @@ var testCases = []struct {
 	{"01:05AM", "The time is now, exactly five past one, in the morning"},
 	{"02:11AM", "The time is now, just after ten past two, in the morning"},
 	{"03:17AM", "The time is now, a little after quarter past three, in the morning"},
-	{"04:19AM", "The time is now, almost twenty past four, in the morning"},
+	{"04:18AM", "The time is now, almost twenty past four, in the morning"},
 
 	{"05:25AM", "The time is now, exactly twenty-five past five, in the morning"},
 	{"06:31AM", "The time is now, just after half past six, in the morning"},
 	{"06:37AM", "The time is now, a little after twenty-five to seven, in the morning"},
-	{"07:39AM", "The time is now, almost twenty to eight, in the morning"},
+	{"07:38AM", "The time is now, almost twenty to eight, in the morning"},
 
 	{"08:45AM", "The time is now, exactly quarter to nine, in the morning"},
 	{"09:51AM", "The time is now, just after ten to ten, in the morning"},
 	{"10:57AM", "The time is now, a little after five to eleven, in the morning"},
-	{"11:59AM", "The time is now, almost twelve."},
+	{"11:58AM", "The time is now, almost twelve."},
 
 	{"12:56PM", "The time is now, just after five to one, in the afternoon"},
 	{"01:52PM", "The time is now, a little after ten to two, in the afternoon"},
