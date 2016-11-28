@@ -40,7 +40,7 @@ func (n Time) hour() string {
 	if m >= 33 {
 		h++
 	}
-	if h == 24 {
+	if h == 0 || h == 24 {
 		return " midnight"
 	}
 	return hours[h%len(hours)]
@@ -50,6 +50,8 @@ func (n Time) tod() string {
 	h, m := n.Hour(), n.Minute()
 	switch {
 	case h == 11 && m >= 58, h == 23 && m >= 33:
+		return ""
+	case (h == 12 || h == 0) && m == 0:
 		return ""
 	case h > 17:
 		return ", in the evening"
