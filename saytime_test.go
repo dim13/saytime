@@ -38,6 +38,9 @@ var testCases = []struct {
 	{"10:09PM", "The time is now, almost ten past ten, in the evening"},
 	{"11:05PM", "The time is now, exactly five past eleven, in the evening"},
 	{"11:47PM", "The time is now, a little after quarter to midnight"},
+
+	{"12:00PM", "The time is now, exactly twelve"},
+	{"12:00AM", "The time is now, exactly midnight"},
 }
 
 func TestSayTime(t *testing.T) {
