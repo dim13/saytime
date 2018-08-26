@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"dim13.org/saytime"
+	"github.com/dim13/saytime"
 )
 
 func main() {
