@@ -1,7 +1,7 @@
 # Saytime
 
 [![GoDoc](https://godoc.org/github.com/dim13/saytime?status.svg)](https://godoc.org/github.com/dim13/saytime)
-[![Build Status](https://travis-ci.org/dim13/saytime.svg?branch=master)](https://travis-ci.org/dim13/saytime)
+[![Build](https://github.com/dim13/saytime/workflows/build/badge.svg)](https://github.com/dim13/saytime/actions)
 
 ## Install
 
