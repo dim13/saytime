@@ -85,20 +85,19 @@ func (n Time) tod() string {
 	}
 }
 
+func spell(prefix, s string) string {
+	if s != "" {
+		return prefix + s
+	}
+	return ""
+}
+
 func (n Time) String() string {
 	s := "The time is now,"
-	if v := n.approx(); v != "" {
-		s += " " + v
-	}
-	if v := n.minute(); v != "" {
-		s += " " + v
-	}
-	if v := n.hour(); v != "" {
-		s += " " + v
-	}
-	if v := n.tod(); v != "" {
-		s += ", in the " + v
-	}
+	s += spell(" ", n.approx())
+	s += spell(" ", n.minute())
+	s += spell(" ", n.hour())
+	s += spell(", in the ", n.tod())
 	return s
 }
 
